@@ -17,7 +17,7 @@
 @import url("../fonts/elegant_font/HTML_CSS/style.css");
 @import url("../fonts/et-line-font/style.css");
 
-* {
+/** {
   --title-font: "Oxanium", Helvetica, Arial, sans-serif;
   --body-font: "Manrope", Helvetica, Arial, sans-serif;
   --body-font-weight: 500;
@@ -33,7 +33,24 @@
   --gradient-text: 0deg,#888888 0%, #ffffff 75%;
   --swiper-theme-color: var(--secondary-color);
 }
+*/
 
+* {
+  --title-font: "Oxanium", Helvetica, Arial, sans-serif;
+  --body-font: "Manrope", Helvetica, Arial, sans-serif;
+  --body-font-weight: 500;
+  --border-default: solid 1px rgba(30, 30, 30, 1);
+  --bg-color-even: #d5d5d5; /* Substituído por #d5d5d5 */
+  --bg-color-odd: #E8E8E8; /* Mantido ou ajustado conforme necessário */
+  --bg-dark-1: #0a1e33; /* Substituído por #0a1e33 */
+  --bg-dark-1-rgb: 10, 30, 51; /* RGB de #0a1e33 */
+  --bg-dark-2: #1e90ff; /* Substituído por #1e90ff */
+  --bg-dark-3: #303030; /* Mantido ou ajustado conforme necessário */
+  --body-font-color: #4C5671; /* Mantido ou ajustado conforme necessário */
+  --dark-body-font-color: #92939e; /* Mantido ou ajustado conforme necessário */
+  --gradient-text: 0deg, #bfeb30 0%, #ffffff 75%; /* Substituído por #bfeb30 */
+  --swiper-theme-color: var(--secondary-color); /* Mantido ou ajustado conforme necessário */
+}
 
 .bg-dark-1{background: var(--bg-dark-1) !important;}
 .bg-dark-2{background: var(--bg-dark-2) !important;}
@@ -672,18 +689,7 @@ header .header-col.mid .social-icons {
   margin-right: 22px;
 }
 
-#mainmenu>li {
-  counter-increment: my-awesome-counter;
-}
-#mainmenu>li::before {
-  content: counter(my-awesome-counter) "";
-  position: absolute;
-  right: 8px;
-  top: 15px;
-  font-weight: bold;
-  font-size: 10px;
-  color:rgba(255, 255, 255, .5);
-}
+
 
 header.smaller #mainmenu>li::before{
   transform: scale(0);
@@ -20857,3 +20863,87 @@ img {
   }
 }
 
+/* Ajustes para responsividade */
+@media (max-width: 1200px) {
+  .slider-title {
+      font-size: 2rem; /* Reduz o tamanho do título */
+  }
+
+  .slider-text {
+      font-size: 1rem; /* Reduz o tamanho do texto */
+  }
+
+  .sw-benefits ul li {
+      font-size: 0.9rem; /* Reduz o tamanho da lista */
+  }
+
+  .btn-main {
+      font-size: 0.9rem; /* Reduz o tamanho do botão */
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider-title {
+      font-size: 1.8rem; /* Reduz ainda mais o título */
+  }
+
+  .slider-text {
+      font-size: 0.9rem; /* Reduz ainda mais o texto */
+  }
+
+  .sw-benefits ul li {
+      font-size: 0.8rem; /* Reduz ainda mais a lista */
+  }
+
+  .btn-main {
+      font-size: 0.8rem; /* Reduz ainda mais o botão */
+      padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-title {
+      font-size: 1.5rem; /* Título menor para dispositivos móveis */
+  }
+
+  .slider-text {
+      font-size: 0.8rem; /* Texto menor para dispositivos móveis */
+  }
+
+  .sw-benefits ul li {
+      font-size: 0.7rem; /* Lista menor para dispositivos móveis */
+  }
+
+  .btn-main {
+      font-size: 0.7rem; /* Botão menor para dispositivos móveis */
+      padding: 5px 10px;
+  }
+
+  .swiper-slide {
+      padding: 10px; /* Reduz o padding para economizar espaço */
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-title {
+      font-size: 1.2rem; /* Título muito pequeno para telas muito pequenas */
+  }
+
+  .slider-text {
+      font-size: 0.7rem; /* Texto muito pequeno para telas muito pequenas */
+  }
+
+  .sw-benefits ul li {
+      font-size: 0.6rem; /* Lista muito pequena para telas muito pequenas */
+  }
+
+  .btn-main {
+      font-size: 0.6rem; /* Botão muito pequeno para telas muito pequenas */
+      padding: 4px 8px;
+  }
+
+  .swiper-slide {
+      padding: 5px; /* Padding mínimo para telas muito pequenas */
+  }
+}
